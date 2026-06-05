@@ -2,39 +2,30 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body { background-color: #1a1a1a; color: white; font-family: sans-serif; padding: 20px; }
-        .card { background-color: #262626; padding: 15px; border-radius: 10px; margin-bottom: 15px; }
-        select, input { width: 100%; padding: 10px; margin: 5px 0; background: #333; color: white; border: none; border-radius: 5px; }
-        .btn-green { background-color: #2e7d32; padding: 15px; text-align: center; border-radius: 5px; width: 100%; margin-top: 10px; }
-        .btn-blue { background-color: #1976d2; padding: 15px; text-align: center; border-radius: 5px; width: 100%; margin-top: 10px; }
+        body { background-color: #1a1a1a; color: white; font-family: sans-serif; padding: 10px; margin: 0; }
+        .card { background-color: #262626; padding: 10px; border-radius: 10px; margin-bottom: 10px; }
+        select, input { width: 100%; padding: 8px; margin: 5px 0; background: #333; color: white; border: none; border-radius: 5px; }
+        .btn-green { background-color: #2e7d32; padding: 12px; text-align: center; border-radius: 5px; margin-top: 5px; }
+        .btn-red { background-color: #d32f2f; padding: 12px; text-align: center; border-radius: 5px; margin-top: 5px; }
+        /* هذا الجزء لإضافة الشارت */
+        iframe { width: 100%; height: 300px; border: none; margin-top: 15px; border-radius: 10px; }
     </style>
 </head>
 <body>
 
     <div class="card">
         <h3>إعدادات البوت</h3>
-        <label>اختيار الزوج:</label>
-        <select id="pairs">
-            <option>EURUSD_otc</option>
-            <option>GBPUSD_otc</option>
-            <option>AUDUSD_otc</option>
-        </select>
-        
-        <label>المبلغ (Amount):</label>
-        <input type="number" placeholder="100">
-        
-        <label>الاستراتيجية:</label>
-        <select>
-            <option>نقطة الصفر (الدعم والمقاومة)</option>
-            <option>استراتيجية Chandelier Exit</option>
-            <option>استراتيجية Chello Pro</option>
-        </select>
+        <select><option>EURUSD_otc</option><option>GBPUSD_otc</option></select>
+        <input type="number" placeholder="المبلغ: 10">
+        <select><option>نقطة الصفر</option></select>
     </div>
 
     <div class="btn-green">تفعيل البوت</div>
-    <div class="btn-blue" style="background-color: #d32f2f;">إيقاف البوت</div>
+    <div class="btn-red">إيقاف البوت</div>
+
+    <!-- إضافة الشارت -->
+    <iframe src="https://pocketoption.com/en/cabinet/demo-quick-trading/" title="Trading Chart"></iframe>
 
 </body>
 </html>
