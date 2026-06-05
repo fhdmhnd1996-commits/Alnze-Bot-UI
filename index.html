@@ -2,22 +2,39 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body { background-color: #121212; color: #ffffff; font-family: sans-serif; margin: 0; padding: 20px; }
-        .container { max-width: 400px; margin: auto; background: #1e1e1e; padding: 20px; border-radius: 20px; }
-        button { width: 100%; padding: 15px; margin: 10px 0; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; }
-        .real-btn { background-color: #2e7d32; color: white; }
-        .start-btn { background-color: #1565c0; color: white; }
-        input, select { width: 100%; padding: 12px; margin: 8px 0; border-radius: 8px; border: 1px solid #333; background: #333; color: white; }
+        body { background-color: #1a1a1a; color: white; font-family: sans-serif; padding: 20px; }
+        .card { background-color: #262626; padding: 15px; border-radius: 10px; margin-bottom: 15px; }
+        select, input { width: 100%; padding: 10px; margin: 5px 0; background: #333; color: white; border: none; border-radius: 5px; }
+        .btn-green { background-color: #2e7d32; padding: 15px; text-align: center; border-radius: 5px; width: 100%; margin-top: 10px; }
+        .btn-blue { background-color: #1976d2; padding: 15px; text-align: center; border-radius: 5px; width: 100%; margin-top: 10px; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h2 style="text-align:center;">لوحة تحكم Alnze</h2>
-        <button class="real-btn">حساب حقيقي (REAL)</button>
-        <input type="number" placeholder="المبلغ (مثلاً 100)">
-        <select><option>EURUSD_otc</option></select>
-        <button class="start-btn" onclick="alert('جاري تفعيل البوت...')">تفعيل البوت</button>
+
+    <div class="card">
+        <h3>إعدادات البوت</h3>
+        <label>اختيار الزوج:</label>
+        <select id="pairs">
+            <option>EURUSD_otc</option>
+            <option>GBPUSD_otc</option>
+            <option>AUDUSD_otc</option>
+        </select>
+        
+        <label>المبلغ (Amount):</label>
+        <input type="number" placeholder="100">
+        
+        <label>الاستراتيجية:</label>
+        <select>
+            <option>نقطة الصفر (الدعم والمقاومة)</option>
+            <option>استراتيجية Chandelier Exit</option>
+            <option>استراتيجية Chello Pro</option>
+        </select>
     </div>
+
+    <div class="btn-green">تفعيل البوت</div>
+    <div class="btn-blue" style="background-color: #d32f2f;">إيقاف البوت</div>
+
 </body>
 </html>
