@@ -1,21 +1,10 @@
-<!DOCTYPE html>
-<html dir="rtl">
-<body>
-    <button onclick="findButtons()" style="padding:20px; background:yellow;">اضغط هنا لاكتشاف أزرار المنصة</button>
-    <div id="debug" style="color:white; font-size:12px;"></div>
-    
-    <iframe id="tradingFrame" src="https://pocketoption.com/en/cabinet/demo-quick-trading/" style="width:100%; height:80vh;"></iframe>
-
-    <script>
-        function findButtons() {
-            var frame = document.getElementById('tradingFrame');
-            var buttons = frame.contentDocument.querySelectorAll('button');
-            var result = "";
-            buttons.forEach(function(btn) {
-                result += "Class: " + btn.className + " | Text: " + btn.innerText + "<br>";
-            });
-            document.getElementById('debug').innerHTML = result;
+<script>
+    // هذا السكريبت سيستمع لأي رسالة تأتي من تطبيق Kodular
+    window.addEventListener("message", function(event) {
+        if (event.data === "click_buy") {
+            // هنا نحدد الكلاس أو المعرف الخاص بزر الشراء في المنصة
+            // استبدل 'selector-of-buy-button' بالمعرف الحقيقي للزر
+            document.querySelector('.buy-button-class').click();
         }
-    </script>
-</body>
-</html>
+    });
+</script>
